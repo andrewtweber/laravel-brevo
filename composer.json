@@ -1,11 +1,11 @@
 {
-    "name": "hofmannsven/laravel-brevo",
+    "name": "andrewtweber/laravel-brevo",
     "description": "Laravel wrapper for Brevo's API v3 PHP library.",
     "keywords": [
         "laravel",
         "brevo"
     ],
-    "homepage": "https://github.com/hofmannsven/laravel-brevo",
+    "homepage": "https://github.com/andrewtweber/laravel-brevo",
     "license": "MIT",
     "type": "library",
     "authors": [
