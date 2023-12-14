@@ -1,4 +1,5 @@
 # Composer
+composer.lock
 /vendor
 
 # PHPUnit
@@ -6,3 +7,6 @@
 /coverage
 phpunit.xml
 .phpunit.cache
+
+# PhpStorm
+/.idea
