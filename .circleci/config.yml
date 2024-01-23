@@ -14,7 +14,9 @@ jobs:
       - run:
           name: Install PHP extensions
           command: |
-            sudo docker-php-ext-install curl mbstring xdebug
+            sudo docker-php-ext-install curl mbstring
+            sudo pecl install xdebug
+            sudo docker-php-ext-enable xdebug
 
       # Download and cache dependencies
 
