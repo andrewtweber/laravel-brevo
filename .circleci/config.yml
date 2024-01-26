@@ -22,8 +22,6 @@ jobs:
           name: Install PHP extensions
           command: |
             sudo docker-php-ext-install curl mbstring
-            sudo pecl install xdebug
-            sudo docker-php-ext-enable xdebug
       - restore_cache:
           keys:
             - composer-v2-{{ checksum "composer.json" }}
@@ -48,6 +46,11 @@ jobs:
       - image: cimg/php:8.1
     steps:
       - *attach_workspace
+      - run:
+          name: Install XDebug
+          command: |
+            sudo pecl install xdebug
+            sudo docker-php-ext-enable xdebug
       - run:
           name: PHP Unit tests
           command: ./vendor/bin/phpunit
